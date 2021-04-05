@@ -1,28 +1,57 @@
-func hasAnyMatches (list: [Int], condition: (Int) -> Bool) -> Bool{
-    for item in list {
-        if condition(item){
-            return true
-        }
+class NamedShape {
+    var numberOfSides: Int = 0
+    var name: String
+    init(name: String) {
+        self.name = name
     }
-    return false
-}
-func lessThanTen(number: Int) -> Bool {
-    return number < 1
+    
+    func simpleDescription() -> String {
+        return "A shape with \(numberOfSides) sides."
+    }
 }
 
-var numbers  = [20, 19, 7, 12]
-hasAnyMatches(list: numbers, condition: lessThanTen)
 
-numbers.map({ (number: Int) -> Int in
-    var result = 0
-                if number%2 == 0{
-                    result = number
-                } else {
-                    result = 0
-                }
-    return result
-})
 
-for num in numbers {
-    print(num)
+
+class Square: NamedShape {
+    var sideLendth: Double
+    init(sideLendth: Double, name: String) {
+        self.sideLendth = sideLendth
+        super.init(name: name)
+        numberOfSides = 4
+    }
+    
+    func area() -> Double {
+        return sideLendth * sideLendth
+    }
+    
+    override func simpleDescription() -> String {
+        return "A square with sides of length \(sideLendth)"
+    }
 }
+
+let test = Square(sideLendth: 5.2, name: "my test square")
+test.area()
+test.simpleDescription()
+
+class Circle: NamedShape {
+    var radius: Double
+    
+    init(radius: Double, name: String) {
+        self.radius = radius
+        super.init(name: name)
+    }
+    
+    func Area() -> Double {
+        var rad: Double
+        rad = 3.14 * (radius * radius)
+        return rad
+    }
+    
+    override func simpleDescription() -> String {
+        return "A square with radius \(radius)"
+    }
+}
+let test2 = Circle(radius: 3.4, name: "Krug")
+test2.Area()
+test2.simpleDescription()
