@@ -1,2 +1,0 @@
-# studyProject
-My first commit
