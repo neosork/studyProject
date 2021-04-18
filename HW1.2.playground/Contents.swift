@@ -89,6 +89,16 @@ default:
 //ну со звёздочкой же, я правда знаю как это все иф элсить)
 //простите что ослушался указаний как правильно сделать)
 
+if 1...3 ~= monthOfBirth {
+    print("первый квартал ")
+} else if 4...6 ~= monthOfBirth {
+    print("второй квартал ")
+} else if 7...9 ~= monthOfBirth {
+    print("третий квартал ")
+} else if 10...12 ~= monthOfBirth {
+    print("четвертый квартал")
+} else { print("вовсе не квартал")}
+
 /*:
  ### Задание 4
  Задание на вашу способность гуглить. Необходимо вычислить синус от числа 1 и округлить результат до тысячных. Для получания результата радианы искать не надо. Достаточно найти нужную функцию и она все сделает за вас.
@@ -97,4 +107,45 @@ default:
 let sinus = sin(1.0)
 let sinusNeed = (round(1000 * sinus) / 1000)
 print(sinusNeed)
+
+enum MyEnum: Int {
+    case first = 1
+}
+
+func returnValue(value: MyEnum) -> Int {
+    value.rawValue
+}
+
+returnValue(value: .first)
+
+
+enum Rank: Int {
+    case ace = 1
+    case two, three, four, five, six, seven, eight, nine, ten
+    case jack, queen, king
+    func simpleDescription() -> String {
+        switch self {
+        case .ace:
+            return "ace"
+        case .jack:
+            return "jack"
+        case .queen:
+            return "queen"
+        case .king:
+            return "king"
+        default:
+            return String(self.rawValue)
+        }
+    }
+}
+let ace = Rank.ace
+let aceRawValue = ace.rawValue
+
+
+func compare(first: Rank, second: Rank) -> Bool {
+    first.rawValue < second.rawValue
+}
+
+
+compare(first: .ace, second: .five)
 
