@@ -82,14 +82,12 @@ class Shape {
         "Площадь фигуры \(String(describing: type(of: self))) равна \(square), периметр (длина) равен(а) \(perimeter)"
     }
     
-    internal func squareOfShape() -> Float {
-        //height * width
-        square
+    func squareOfShape() -> Float {
+        return 0.0
     }
     
-    internal func perimeterOfShape() -> Float  {
-        //(height + width) * 2
-        perimeter
+    func perimeterOfShape() -> Float  {
+        return 0.0
     }
     
     
