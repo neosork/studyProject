@@ -74,7 +74,7 @@ class Shape {
     var square: Float {
         squareOfShape()
     }
-    var perimeter: Float{
+    var perimeter: Float {
         perimeterOfShape()
     }
     
@@ -83,11 +83,13 @@ class Shape {
     }
     
     internal func squareOfShape() -> Float {
-        height * width
+        //height * width
+        square
     }
     
     internal func perimeterOfShape() -> Float  {
-        (height + width) * 2
+        //(height + width) * 2
+        perimeter
     }
     
     
@@ -121,7 +123,14 @@ class Circle: Shape {
 }
 
 class Rectangle: Shape {
+    override func squareOfShape() -> Float {
+        height * width
+        
+    }
     
+    override func perimeterOfShape() -> Float {
+        (height + width) * 2
+    }
 }
 
 class Ellipse: Shape {
