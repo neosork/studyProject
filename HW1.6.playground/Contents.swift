@@ -130,11 +130,11 @@ class Ellipse: Shape {
     var shortDiametr: Float
     
     override func squareOfShape() -> Float {
-        2 * Float.pi * sqrt((longDiametr * longDiametr + shortDiametr * shortDiametr)/2)
+         Float.pi * ((longDiametr * shortDiametr) / 4)
     }
     
     override func perimeterOfShape() -> Float {
-        2 * Float.pi * longDiametr * shortDiametr
+       2 * Float.pi * sqrt((longDiametr * longDiametr + shortDiametr * shortDiametr) / 8)
     }
     
     init(longDiametr: Float, shortDiametr: Float) {
@@ -156,6 +156,7 @@ let ellips = Ellipse(longDiametr: 25, shortDiametr: 10)
 print(circle.description)
 print(rectangle.description)
 print(ellips.description)
+
 /*:
  ## Задание 3
  3.1 Создайте класс `Employee` (сотрудник) со следующими свойствами:
@@ -168,8 +169,8 @@ print(ellips.description)
  */
 class Employee {
     var salary: Int
-    var name: String = ""
-    var surname: String = ""
+    var name: String
+    var surname: String 
     
     init(salary: Int, name: String, surname: String){
         self.name = name
