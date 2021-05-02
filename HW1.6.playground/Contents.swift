@@ -197,7 +197,7 @@ var surnames = ["Smith", "Dow", "Isaacson", "Pennyworth", "Jankins"]
 var employees = [Employee]()
 
 
-for _ in 0...3 {
+for _ in 0...9 {
     let employe = Employee(salary: Int.random(in: 1000...2000), name: names[Int.random(in: 0...4)], surname: surnames[Int.random(in: 0...4)])
     employees.append(employe)
 }
