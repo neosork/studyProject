@@ -26,7 +26,7 @@ func calculate(firstNum a: Int, secoundNum b: Int, type calcul: CalculationType)
         return a - b
     case .multyply:
         return a * b
-    default: print("not MM")
+    
     }
 }
 
