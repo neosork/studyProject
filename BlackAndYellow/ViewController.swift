@@ -2,30 +2,17 @@
 //  ViewController.swift
 //  BlackAndYellow
 //
-//  Created by Rinat Latypov on 18.05.2021.
+//  Created by Rinat Latypov on 13.09.2022.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-    
 
-    
-    
     override func viewDidLoad() {
-        
-        
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func unwindToPurpleAndBlack(_ unwindSegue: UIStoryboardSegue) {
 
-    }
-    
-  
-    
 
 }
-
